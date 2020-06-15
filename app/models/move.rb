@@ -1,5 +1,22 @@
+# frozen_string_literal: true
+
 class Move < ApplicationRecord
-  MOVE_TYPES = %w[kick block hand]
   validates :name, presence: true, uniqueness: true
-  validates :move_type, presence: true, inclusion: { in: MOVE_TYPES}
+  validates :move_type, presence: true
+
+  enum move_type: {
+    block: 0,
+    hand: 1,
+    kick: 2
+  }
+
+  enum belt_level: {
+    white: 0,
+    orange: 1,
+    purple: 2,
+    blue: 3,
+    green: 4,
+    brown: 5,
+    black: 6
+  }
 end

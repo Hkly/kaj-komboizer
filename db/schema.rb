@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2019_10_07_190201) do
 
   create_table "moves", force: :cascade do |t|
     t.string "name", null: false
-    t.string "move_type", null: false
-    t.string "belt_level"
+    t.integer "move_type", null: false
+    t.integer "belt_level"
   end
 
 end
