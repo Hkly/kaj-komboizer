@@ -1,0 +1,8 @@
+%h1 Kaj Kombo
+
+%ul#selector
+  - @moves.each do |move|
+    %li= move.name.titlecase
+
+.make-kombo
+  = link_to 'New Kombo', home_index_path
