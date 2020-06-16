@@ -2,7 +2,16 @@
 
 class HomeController < ApplicationController
   def index
-    ids = Move.pluck(:id).sample(3)
+    ids = Move.where(filter_params).pluck(:id).sample(3)
     @moves = Move.find(ids)
+  end
+
+  private
+
+  def filter_params
+    params.permit(
+      move_type: [],
+      belt_level: []
+    )
   end
 end
