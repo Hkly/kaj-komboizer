@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_16_004010) do
+ActiveRecord::Schema.define(version: 2020_06_18_220451) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,11 @@ ActiveRecord::Schema.define(version: 2020_06_16_004010) do
     t.string "name", null: false
     t.integer "move_type", null: false
     t.integer "belt_level"
+  end
+
+  create_table "page_contents", force: :cascade do |t|
+    t.string "page_name", null: false
+    t.text "content_body"
   end
 
 end
