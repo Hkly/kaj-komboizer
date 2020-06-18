@@ -15,8 +15,6 @@ class Move < ApplicationRecord
     orange: 1,
     purple: 2,
     blue: 3,
-    green: 4,
-    brown: 5,
-    black: 6
+    green: 4
   }
 end

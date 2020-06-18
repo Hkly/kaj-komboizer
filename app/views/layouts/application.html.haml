@@ -8,9 +8,11 @@
     %meta{charset: 'utf-8'}
 
     %meta{name: 'viewport', content: 'initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width'}
-
+    %link{href: "https://fonts.googleapis.com/css2?family=Open+Sans&family=Sigmar+One&display=swap", rel: "stylesheet"}
     %link{rel: "shortcut icon", href: image_path('favicon.ico')}
     = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
 
   %body{ data: { controller: controller_path.sub('/', '_'), action: action_name } }
-    = yield
+    .fixed-width-container.center
+      = yield

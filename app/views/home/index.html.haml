@@ -1,22 +1,24 @@
-%h1 Kaj Kombo
+%h1 Kaj Komboizer
 
-%ul#selector
+%ul.kombo-list
   - @moves.each do |move|
-    %li= move.name.titlecase
+    %li.card= move.name.titlecase
 
-.make-kombo
-  = link_to 'New Kombo', home_index_path
-
-%h2 Filters
 = form_with url: home_index_path, method: 'get' do
-  = label_tag 'Belt Level'
-  - Move.belt_levels.each do |belt_name, _e|
-    = label_tag belt_name, belt_name.titlecase
-    = check_box_tag 'belt_level[]', belt_name, params[:belt_level]&.include?(belt_name), id: belt_name
+  = submit_tag 'New Kombo', class: 'btn'
 
-  = label_tag 'Technique Type'
-  - Move.move_types.each do |move_type, _e|
-    = label_tag move_type, move_type.pluralize.titlecase
-    = check_box_tag 'move_type[]', move_type, params[:move_type]&.include?(move_type), id: move_type
+  %h2.filter-toggle Filters &or;
+  .filter-options.hide
+    %h3 Belt Level
+    .option-row
+      - Move.belt_levels.each do |belt_name, _e|
+        .option
+          = label_tag belt_name, belt_name.titlecase
+          = check_box_tag 'belt_level[]', belt_name, params[:belt_level]&.include?(belt_name), id: belt_name
 
-  = submit_tag 'New Kombo'
+    %h3 Technique Type
+    .option-row
+      - Move.move_types.each do |move_type, _e|
+        .option
+          = label_tag move_type, move_type.pluralize.titlecase
+          = check_box_tag 'move_type[]', move_type, params[:move_type]&.include?(move_type), id: move_type

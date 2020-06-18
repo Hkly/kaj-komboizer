@@ -10,9 +10,10 @@
 // Active Admin's got SASS!
 @import "active_admin/mixins";
 @import "active_admin/base";
+@import "variables";
 
 $skinMainFirstColor: #111111!default;
-$skinMainSecondColor: #c81818!default;
+$skinMainSecondColor: $primary-red!default;
 $skinBorderWindowColor: #b4b4b4!default;
 
 @import "wigu/active_admin_theme";

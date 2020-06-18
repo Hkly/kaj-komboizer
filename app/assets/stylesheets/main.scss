@@ -1,0 +1,35 @@
+@import 'variables';
+@import 'components';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: $background-white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.hide {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.fixed-width-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'Sigmar One', sans-serif;
+  color: $black;
+}
