@@ -14,5 +14,7 @@
     = javascript_include_tag 'application'
 
   %body{ data: { controller: controller_path.sub('/', '_'), action: action_name } }
+    = render 'shared/top_nav'
     .fixed-width-container.center
       = yield
+    = render 'shared/footer'

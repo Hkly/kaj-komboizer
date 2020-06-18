@@ -1,5 +1,7 @@
 @import 'variables';
 @import 'components';
+@import 'top_nav';
+@import 'footer';
 
 * {
   padding: 0;
@@ -10,6 +12,13 @@
 html, body {
   background: $background-white;
   font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 ul {
@@ -27,6 +36,7 @@ ul {
 .fixed-width-container {
   max-width: 1000px;
   margin: auto;
+  flex: auto;
 }
 
 h1 {

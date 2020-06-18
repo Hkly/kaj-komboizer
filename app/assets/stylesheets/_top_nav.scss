@@ -1,0 +1,44 @@
+.top-nav {
+  background-color: $primary-red;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid $yellow;
+
+  .logo {
+    padding-top: 5px;
+    padding-left: 2px;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .menu {
+    ul {
+      height: 100%;
+    }
+
+    li {
+      display: inline-block;
+      height: 100%;
+    }
+
+    a {
+      height: 100%;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      padding: 0 15px;
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+      }
+
+      &:hover {
+        background-color: $btn-hover;
+      }
+    }
+  }
+}

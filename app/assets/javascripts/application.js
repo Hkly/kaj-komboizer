@@ -12,9 +12,13 @@ function toggleFilters() {
 };
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  var checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
-  if(checkedBoxes.length > 0) {
-    toggleFilters();
+  var controller = document.querySelector('body').getAttribute('data-controller');
+
+  if(controller === 'home') {
+    var checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    if(checkedBoxes.length > 0) {
+      toggleFilters();
+    }
+    document.querySelector('.filter-toggle').addEventListener('click', toggleFilters);
   }
-  document.querySelector('.filter-toggle').addEventListener('click', toggleFilters)
 });
