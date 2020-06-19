@@ -1,0 +1,8 @@
+.panel
+  %h3
+    %strong Warning:
+    Importing will delete all current moves and replace them with the contents of your CSV.
+  .panel_contents
+    = form_for :moves_file, url: {action: :import_csv, method: :post} do |f|
+      = f.file_field :file, required: true, accept: '.csv'
+      = f.submit 'Import'
