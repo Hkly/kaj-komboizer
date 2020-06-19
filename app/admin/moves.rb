@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ActiveAdmin.register Move do
   permit_params :name, :move_type, :belt_level
 
