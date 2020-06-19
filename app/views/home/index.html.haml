@@ -1,6 +1,12 @@
 %h1 Kaj Komboizer
 
 %ul.kombo-list
+  - unless Move.any?
+    No moves in the database. Please log in as Admin to add moves.
+
+  - if @moves.empty? && Move.any?
+    No moves for selected filters. Please try different filters.
+
   - @moves.each do |move|
     %li.card= move.name.titlecase
 
