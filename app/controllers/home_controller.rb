@@ -2,8 +2,7 @@
 
 class HomeController < ApplicationController
   def index
-    ids = Move.where(filter_params).pluck(:id).sample(3)
-    @moves = Move.find(ids)
+    @moves = Move.where(filter_params).sample(3)
   end
 
   private
