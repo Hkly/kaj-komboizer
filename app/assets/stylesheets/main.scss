@@ -40,8 +40,14 @@ ul {
   padding: 0 15px;
 }
 
+.small-container {
+  max-width: 500px;
+  margin: auto;
+}
+
 .pre {
   white-space: pre-wrap;
+  text-align: left;
 }
 
 h1 {
