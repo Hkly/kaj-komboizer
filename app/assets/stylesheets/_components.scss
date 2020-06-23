@@ -1,7 +1,7 @@
-.btn, a.btn {
-  padding: 10px 20px;
+.btn, a.btn, form input[type=submit] {
+  padding: 15px 30px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   text-decoration: none;
   color: $btn-text;
   background-color: $btn-color;
