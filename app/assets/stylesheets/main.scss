@@ -21,6 +21,10 @@ body {
   min-height: 100vh;
 }
 
+a {
+  background: none !important;
+}
+
 .hide {
   display: none;
 }
@@ -44,6 +48,14 @@ body {
 .pre {
   white-space: pre-wrap;
   text-align: left;
+
+  a {
+    color: $link-red !important;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
 }
 
 h1 {
