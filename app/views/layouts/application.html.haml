@@ -12,6 +12,14 @@
     %link{rel: "shortcut icon", href: image_path('favicon.ico')}
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
+    - if Rails.env == 'production'
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170580808-1"></script>
+      :javascript
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-170580808-1');
 
   %body{ data: { controller: controller_path.sub('/', '_'), action: action_name } }
     = render 'shared/top_nav'
